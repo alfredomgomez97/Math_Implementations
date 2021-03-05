@@ -73,6 +73,7 @@ public class Demo {
 		System.out.println("1. fibonacci");
 		System.out.println("2. fizzbuzz");
 		System.out.println("3. quadratic solver");
+		System.out.println("What is you option: ");
 	}
 
 }
