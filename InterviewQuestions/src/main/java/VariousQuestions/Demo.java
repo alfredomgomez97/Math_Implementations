@@ -33,22 +33,40 @@ public class Demo {
 			}
 			counter++;
 		}
-		}else if (choice ==2) {
+		}else if (choice ==3) {
 		//find the roots
-		String usersOption = null;
+		Scanner scanner = new Scanner(System.in);
+		String userOption;
+		int aValue;
+		int bValue;
+		int cValue;
 		do {
 		System.out.println("Please enter the values to fill in Ax^2 + Bx +C");
 		System.out.println("Enter the value for A:");
-		int aValue = sc.nextInt();
+		aValue = sc.nextInt();
 		System.out.println("Enter the value for B:");
-		int bValue = sc.nextInt();
+		bValue = sc.nextInt();
 		System.out.println("Enter the value for C:");
-		int cValue = sc.nextInt();
-		System.out.println("Is this correct:" + aValue + "x^2 + "+ bValue +"x " + cValue + "n/N" );
-		usersOption = sc.nextLine(); 
-		}while(usersOption.equals("no"));{
-			
+		cValue = sc.nextInt();
+		System.out.println("Is this correct:" + aValue + "x^2 + "+ bValue +"x +" + cValue + " :n/N" );
+		userOption = scanner.nextLine();
+		
+		}while(userOption.equals("N")); {
+		System.out.println("the first root of this equation");
+		int firstRoot;
+		int secondRoot;
+		firstRoot = (int) ((-bValue) + Math.sqrt(Math.pow(bValue, 2) - 4 * aValue * cValue ));
+		firstRoot = firstRoot/(2*aValue);
+		secondRoot = (int) ((-bValue) + Math.sqrt(Math.pow(bValue, 2) - 4 * aValue * cValue ));
+		secondRoot = secondRoot/(2*aValue);
+		if(firstRoot == secondRoot) {
+			System.out.println("There is one root and it is x = " + firstRoot);
+		}else {
+			System.out.println("The roots of this equation is x = " +  firstRoot + " x = " + secondRoot);
 		}
+		
+		}
+			
 		}
 	}
 	static int Fibonacci(int userNumber) {
